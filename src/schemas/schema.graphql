@@ -1,0 +1,46 @@
+type ProductSize {
+  height: Int
+  width: Int
+  length: Int
+}
+
+input ProductSizeInput {
+  height: Int
+  width: Int
+  length: Int
+}
+
+# type Dimension {
+#   unit: String
+#   value: String
+# }
+
+# input DimensionInput {
+#   unit: String
+#   value: String
+# }
+
+extend type Product {
+  door: [Product]
+  unit: [Product]
+  drawer: [Product]
+  accessories: Product
+  productType: String
+  fitSize: [ProductSize]
+}
+
+extend type ProductVariant {
+  size: ProductSize
+  productType: String
+}
+
+extend input ProductInput {
+  fitSize: [ProductSizeInput]
+}
+
+extend type CatalogProductVariant {
+  door: Product
+  unit: Product
+  drawer: Product
+  accessories: Product
+}
