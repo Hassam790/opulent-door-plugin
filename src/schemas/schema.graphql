@@ -36,8 +36,8 @@ extend type ProductVariant {
 }
 
 extend input ProductInput {
-    availableSizes: [ProductSize]
-  compatibleSizes: [ProductSize]
+    availableSizes: [ProductSizeInput]
+  compatibleSizes: [ProductSizeInput]
   
 }
 
