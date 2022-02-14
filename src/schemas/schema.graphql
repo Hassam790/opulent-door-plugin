@@ -26,7 +26,8 @@ extend type Product {
   drawer: [Product]
   accessories: Product
   productType: String
-  fitSize: [ProductSize]
+  availableSizes: [ProductSize]
+  compatibleSizes: [ProductSize]
 }
 
 extend type ProductVariant {
@@ -35,12 +36,16 @@ extend type ProductVariant {
 }
 
 extend input ProductInput {
-  fitSize: [ProductSizeInput]
+    availableSizes: [ProductSize]
+  compatibleSizes: [ProductSize]
 }
 
 extend type CatalogProductVariant {
-  door: Product
-  unit: Product
-  drawer: Product
+    door: [Product]
+  unit: [Product]
+  drawer: [Product]
   accessories: Product
+  productType: String
+  availableSizes: [ProductSize]
+  compatibleSizes: [ProductSize]
 }
