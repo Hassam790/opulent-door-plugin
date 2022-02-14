@@ -38,6 +38,7 @@ extend type ProductVariant {
 extend input ProductInput {
     availableSizes: [ProductSize]
   compatibleSizes: [ProductSize]
+  
 }
 
 extend type CatalogProductVariant {
