@@ -40,7 +40,11 @@ extend input ProductInput {
   compatibleSizes: [ProductSizeInput]
   
 }
-
+extend input ProductVariantInput  {
+    availableSizes: [ProductSizeInput]
+  compatibleSizes: [ProductSizeInput]
+  
+}
 extend type CatalogProductVariant {
     door: [Product]
   unit: [Product]

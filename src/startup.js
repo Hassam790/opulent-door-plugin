@@ -19,12 +19,12 @@ export default function myStartup(context) {
   });
 
   context.simpleSchemas.Product.extend({
-    fitSize: {
+    availableSizes: {
       type: Array,
-      label: "fitSize",
+      label: "availableSizes",
       optional: true,
     },
-    "fitSize.$": {
+    "availableSizes.$": {
       type: ProductSize,
     },
   });
