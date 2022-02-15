@@ -28,5 +28,14 @@ export default function myStartup(context) {
       type: ProductSize,
     },
   });
-
+  context.simpleSchemas.ProductVariantInput.extend({
+    availableSizes: {
+      type: Array,
+      label: "availableSizes",
+      optional: true,
+    },
+    "availableSizes.$": {
+      type: ProductSize,
+    },
+  });
 }
