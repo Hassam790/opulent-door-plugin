@@ -2,12 +2,14 @@ type ProductSize {
   height: Int
   width: Int
   length: Int
+  price: Int
 }
 
 input ProductSizeInput {
   height: Int
   width: Int
   length: Int
+   price: Int
 }
 
 # type Dimension {

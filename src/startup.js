@@ -16,6 +16,7 @@ export default function myStartup(context) {
     height: Number,
     length: Number,
     width: Number,
+    price: Number
   });
 
   context.simpleSchemas.Product.extend({
