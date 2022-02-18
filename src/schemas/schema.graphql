@@ -30,6 +30,7 @@ extend type Product {
   productType: String
   availableSizes: [ProductSize]
   compatibleSizes: [ProductSize]
+  
 }
 
 extend type ProductVariant {
