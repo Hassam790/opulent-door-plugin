@@ -53,3 +53,6 @@ extend type CatalogProductVariant {
   availableSizes: [ProductSize]
   compatibleSizes: [ProductSize]
 }
+extend type Query{
+  getDoorsByUnitID:[CatalogProduct]
+}
