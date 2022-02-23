@@ -28,6 +28,32 @@ export default function myStartup(context) {
     "availableSizes.$": {
       type: ProductSize,
     },
+    compatibleSizes: {
+      type: Array,
+      label: "compatibleSizes",
+      optional: true,
+    },
+    "compatibleSizes.$": {
+      type: ProductSize,
+    },
+  });
+  context.simpleSchemas.CatalogProductVariant.extend({
+    availableSizes: {
+      type: Array,
+      label: "availableSizes",
+      optional: true,
+    },
+    "availableSizes.$": {
+      type: ProductSize,
+    },
+    compatibleSizes: {
+      type: Array,
+      label: "compatibleSizes",
+      optional: true,
+    },
+    "compatibleSizes.$": {
+      type: ProductSize,
+    },
   });
   context.simpleSchemas.ProductVariant.extend({
     availableSizes: {

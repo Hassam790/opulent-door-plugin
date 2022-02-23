@@ -11,7 +11,12 @@ input ProductSizeInput {
   length: Int
    price: Float
 }
-
+input doorSizeInput {
+   height: Int
+  width: Int
+   length: Int
+   price: Float
+}
 # type Dimension {
 #   unit: String
 #   value: String
@@ -36,6 +41,8 @@ extend type Product {
 extend type ProductVariant {
   size: ProductSize
   productType: String
+    availableSizes: [ProductSize]
+  compatibleSizes: [ProductSize]
 }
 
 extend input ProductInput {
@@ -58,5 +65,5 @@ extend type CatalogProductVariant {
   compatibleSizes: [ProductSize]
 }
 extend type Query{
-  getDoorsByUnitID:[CatalogProduct]
+  getDoorsByUnitID(doorSize:[doorSizeInput]):[CatalogProduct]
 }
